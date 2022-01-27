@@ -1,8 +1,7 @@
 @extends('layouts.main')
 
 @section('konten')
-    <div class="container">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  {{-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="img/dapur.jpg" class="d-block w-100" alt="Kitchen Set">
@@ -19,6 +18,22 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </button>
-        </div>
+        </div> --}}
+  <div class="jumbotron"
+    style="background: url('img/cover.jpg') no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+    <div class="container">
+      <h1 class="text-lr">A Better Life With Electronics</h1>
+      <p>
+        Kami berkomitmen untuk menciptakan hidup dan dunia yang lebih baik,
+        <br>
+        serta berkontribusi untuk terus mengembangkan
+        masyarakat
+        <br>
+        dan kebahagiaan manusia di seluruh Indonesia.
+      </p>
+      <p>
+        <a class="btn btn-warning" href="/products" role="button">Produk &raquo;</a>
+      </p>
     </div>
+  </div>
 @endsection

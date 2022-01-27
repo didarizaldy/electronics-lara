@@ -31,13 +31,18 @@ class DatabaseSeeder extends Seeder
         User::factory(3)->create();
 
         Category::create([
-            'name' => 'Smartphone',
-            'slug' => 'smartphone'
+            'name' => 'Kulkas',
+            'slug' => 'kulkas'
         ]);
 
         Category::create([
-            'name' => 'Laptop',
-            'slug' => 'laptop'
+            'name' => 'Oven',
+            'slug' => 'oven'
+        ]);
+
+        Category::create([
+            'name' => 'Kompor',
+            'slug' => 'kompor'
         ]);
 
         Product::factory(20)->create();

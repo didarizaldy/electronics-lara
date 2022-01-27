@@ -17,10 +17,9 @@ class CategoryController extends Controller
 
     public function show(Category $category)
     {
-        return view('category', [
-            'headtag' => $category->name,
-            'products' => $category->products,
-            'category' => $category->name
+        return view('products', [
+            'headtag' => "Kategori Produk : $category->name",
+            'products' => $category->products->load('category', 'user')
         ]);
     }
 }

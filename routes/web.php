@@ -10,13 +10,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home', [
-        "headtag" => "A Better Life With Electronics"
+        "headtag" => "Electronics - A Better Life With Electronics"
     ]);
 });
 
 Route::get('/about', function () {
     return view('about', [
-        "headtag" => "Tentang Kami",
+        "headtag" => "Electronics - Tentang Kami",
         "name" => "Electronics",
         "title" => "Kemudahan Membuatmu Merasakan Kehidupan Yang Lebih Baik",
         "body" => "Kami berkomitmen untuk menciptakan hidup dan dunia yang lebih baik, serta berkontribusi untuk terus mengembangkan masyarakat dan kebahagiaan manusia di seluruh dunia."

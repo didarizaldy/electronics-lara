@@ -10,8 +10,8 @@ class SellerController extends Controller
     public function index(User $user)
     {
         return view('products', [
-            'headtag' => 'Seller',
-            'products' => $user->products
+            'headtag' => "$user->name : Produk",
+            'products' => $user->products->load('category', 'user')
         ]);
     }
 }
