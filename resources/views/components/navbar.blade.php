@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg"">
-    <a class=" navbar-brand text-decoration-none text-dark" href="/">
+    <a class="                                               navbar-brand text-decoration-none text-dark" href="/">
   <img class="mb-2 my-0 mr-md-auto"
     src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/samsung/312/high-voltage_26a1.png"
     alt="Logo" width="24" height="24">Electronics</a>
@@ -13,15 +13,28 @@
         <a class="nav-link text-decoration-none text-dark" href="/products">Produk</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link text-decoration-none text-dark" href="/categories">Kategori</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link text-decoration-none text-dark" href="/about">Tentang Kami</a>
       </li>
     </ul>
   </div>
-  <form class="form-inline ms-auto mr-2">
+  <div class="mr-2">
+    <form action="/products">
+      <div class="input-group mr-sm-2">
+        <input type="text" class="form-control" placeholder="Cari.." name="search" value="{{ request('search') }}">
+        <div class="input-group-append">
+          <button class="btn btn-warning" type="submit">🛒</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  {{-- <form class="form-inline ms-auto mr-2">
     <input class="form-control mr-sm-2" type="search" placeholder="Cari.." aria-label="Search">
     <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
-  </form>
-  <a href="#" class="ms-auto btn btn-warning">
+  </form> --}}
+  <a href="#" class="ms-auto btn btn-outline-warning my-2">
     Login
   </a>
 </nav>

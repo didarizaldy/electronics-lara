@@ -16,9 +16,11 @@
         {{ $product->created_at->diffForHumans() }}
       </p>
     </small>
-    <div class="mt-5">
+    <img src="https://source.unsplash.com/1200x400?{{ $product->category->name }}" class="img-fluid"
+      alt="{{ $product->category->name }}">
+    <article class="my-3">
       {!! $product->body !!}
-    </div>
+    </article>
   </article>
 
   <a href="/products" class="text-decoration-none">Kembali Ke Produk</a>

@@ -9,29 +9,29 @@
     <div class="col-6 col-md">
       <h5>Sosial Media</h5>
       <ul class="list-unstyled text-small">
-        <li><a class="text-muted" href="#">Instagram</a></li>
-        <li><a class="text-muted" href="#">Medium</a></li>
-        <li><a class="text-muted" href="#">Youtube</a></li>
-        <li><a class="text-muted" href="#">LinkedIn</a></li>
+        <li class="text-muted">Instagram</li>
+        <li class="text-muted">Medium</li>
+        <li class="text-muted">Youtube</li>
+        <li class="text-muted">LinkedIn</li>
       </ul>
     </div>
     <div class="col-6 col-md">
       <h5>Kerja-sama</h5>
       <ul class="list-unstyled text-small">
-        <li><a class="text-muted" href="#">Panasonic</a></li>
-        <li><a class="text-muted" href="#">LG</a></li>
-        <li><a class="text-muted" href="#">One Plus</a></li>
-        <li><a class="text-muted" href="#">Toshiba</a></li>
-        <li><a class="text-muted" href="#">Sony</a></li>
+        <li class="text-muted">Panasonic</li>
+        <li class="text-muted">LG</li>
+        <li class="text-muted">One Plus</li>
+        <li class="text-muted">Toshiba</li>
+        <li class="text-muted">Sony</li>
       </ul>
     </div>
     <div class="col-6 col-md">
       <h5>Lainnya</h5>
       <ul class="list-unstyled text-small">
-        <li><a class="text-muted" href="#">Toko Resmi</a></li>
-        <li><a class="text-muted" href="#">Garansi</a></li>
-        <li><a class="text-muted" href="#">Karir</a></li>
-        <li><a class="text-muted" href="#">Join Bersama Kami</a></li>
+        <li class="text-muted">Toko Resmi</li>
+        <li class="text-muted">Garansi</li>
+        <li class="text-muted">Karir</li>
+        <li class="text-muted">Join Bersama Kami</li>
       </ul>
     </div>
   </div>
