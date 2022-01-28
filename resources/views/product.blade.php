@@ -5,11 +5,11 @@
     <h2>{{ $product->title }}</h2>
     <small class="text-muted">
       Penjual :
-      <a href="/seller/{{ $product->user->username }}" class="text-decoration-none">
+      <a href="/products?user={{ $product->user->username }}" class="text-decoration-none">
         {{ $product->user->name }}
       </a>
       Kategori :
-      <a href="/categories/{{ $product->category->slug }}" class="text-decoration-none">
+      <a href="/products?category={{ $product->category->slug }}" class="text-decoration-none">
         {{ $product->category->name }}
       </a>
       <p>

@@ -17,10 +17,10 @@
         <p>
           <small class="text-muted">
             Penjual :
-            <a href="/seller/{{ $products[0]->user->username }}" class="text-decoration-none">
+            <a href="/products?user={{ $products[0]->user->username }}" class="text-decoration-none">
               {{ $products[0]->user->name }}
             </a>Category :
-            <a href="/categories/{{ $products[0]->category->slug }}" class="text-decoration-none">
+            <a href="/products?category={{ $products[0]->category->slug }}" class="text-decoration-none">
               {{ $products[0]->category->name }}
             </a>
             <p>
@@ -49,11 +49,11 @@
                 <p>
                   <small class="text-muted">
                     Penjual :
-                    <a href="/seller/{{ $product->user->username }}" class="text-decoration-none">
+                    <a href="/products?user={{ $product->user->username }}" class="text-decoration-none">
                       {{ $product->user->name }}
                     </a>
                     Kategori :
-                    <a href="/categories/{{ $product->category->slug }}" class="text-decoration-none">
+                    <a href="/products?category={{ $product->category->slug }}" class="text-decoration-none">
                       {{ $product->category->name }}
                     </a>
                     <p>
@@ -76,4 +76,8 @@
   @else
     <p class="fs-4 text-center">Produk yang kamu cari gada nih !</p>
   @endif
+
+  <div class="d-flex justify-content-end">
+    {{ $products->links() }}
+  </div>
 @endsection
