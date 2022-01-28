@@ -18,11 +18,17 @@ class RegisterController extends Controller
 	{
 		$validatedData = $request->validate([
 			'name' => 'required|max:50',
-			'username' => ['required', 'min:4', 'max:12', 'unique:user'],
-			'email' => 'required|email:rfc,dns|max:20|unique:users',
+			'username' => ['required', 'min:4', 'max:15', 'unique:users'],
+			'email' => 'required|email:dns|max:30|unique:users',
 			'password' => 'required|min:6|max:14'
 		]);
 
+		$validatedData['password'] = bcrypt($validatedData['password']);
+
 		User::create($validatedData);
+
+		$request->session()->flash('success', 'Registrasi Berhasil');
+
+		return redirect('/login');
 	}
 }

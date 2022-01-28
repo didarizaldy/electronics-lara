@@ -59,7 +59,7 @@
                   <div class="text-center">
                     <h1 class="h4 text-gray-900 mb-4">Form Registrasi</h1>
                   </div>
-                  <form class="user" action="/register" method="POST">
+                  <form class="user" action="/register" method="post">
                     @csrf
                     <div class="form-group">
                       <input type="text" name="name"
@@ -90,7 +90,7 @@
                         id="email" placeholder="name@email.com" required value="{{ old('email') }}">
                       @error('email')
                         <div class=" invalid-feedback">
-                          Email kamu udah kedaftar
+                          {{ $message }}
                         </div>
                       @enderror
                     </div>
