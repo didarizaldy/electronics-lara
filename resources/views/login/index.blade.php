@@ -66,14 +66,27 @@
                       </button>
                     </div>
                   @endif
-                  <form class="user">
+
+                  @if (session()->has('loginError'))
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                      {{ session('loginError') }}
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                  @endif
+                  <form class="user" action="/login" method="post">
+                    @csrf
                     <div class="form-group">
-                      <input type="email" class="form-control form-control-user" id="exampleInputEmail"
-                        aria-describedby="emailHelp" placeholder="Enter Email Address...">
+                      <input type="email" name="email"
+                        class="form-control form-control-user @error('email')
+                          is-invalid
+                      @enderror"
+                        id="email" placeholder="Masukkan Email..." autofocus required value="{{ old('email') }}">
                     </div>
                     <div class="form-group">
-                      <input type="password" class="form-control form-control-user" id="exampleInputPassword"
-                        placeholder="Password">
+                      <input type="password" name="password" class="form-control form-control-user" id="password"
+                        placeholder="Password" required>
                     </div>
                     <div class="form-group">
                       <div class="custom-control custom-checkbox small">
@@ -82,9 +95,9 @@
                           Me</label>
                       </div>
                     </div>
-                    <a href="index.html" class="btn btn-primary btn-user btn-block">
+                    <button class="btn btn-primary btn-user btn-block" type="submit">
                       Login
-                    </a>
+                    </button>
                     <hr>
                     <div class="text-center mt-5">
                       <small>Belum punya akun ?</small>

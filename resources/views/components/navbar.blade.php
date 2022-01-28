@@ -1,6 +1,5 @@
 <nav class="navbar navbar-expand-lg"">
-    <a class="                                                          navbar-brand text-decoration-none text-dark"
-  href="/">
+    <a class=" navbar-brand text-decoration-none text-dark" href="/">
   <img class="mb-2 my-0 mr-md-auto"
     src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/samsung/312/high-voltage_26a1.png"
     alt="Logo" width="24" height="24">Electronics</a>
@@ -10,15 +9,30 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link text-decoration-none text-dark" href="/products">Produk</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-decoration-none text-dark" href="/categories">Kategori</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-decoration-none text-dark" href="/about">Tentang Kami</a>
-      </li>
+      @auth
+        <li class="nav-item">
+          <a class="nav-link text-decoration-none text-dark" href="/dashboard">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-decoration-none text-dark" href="/products">Produk</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-decoration-none text-dark" href="/categories">Kategori</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-decoration-none text-dark" href="/about">Tentang Kami</a>
+        </li>
+      @else
+        <li class="nav-item">
+          <a class="nav-link text-decoration-none text-dark" href="/products">Produk</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-decoration-none text-dark" href="/categories">Kategori</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-decoration-none text-dark" href="/about">Tentang Kami</a>
+        </li>
+      @endauth
     </ul>
   </div>
   <div class="mr-2">
@@ -42,7 +56,16 @@
     <input class="form-control mr-sm-2" type="search" placeholder="Cari.." aria-label="Search">
     <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
   </form> --}}
-  <a href="/login" class="ms-auto btn btn-outline-warning my-2">
-    <i class="bi bi-box-arrow-in-right"></i> Login
-  </a>
+  @auth
+    <form action="/logout" method="post">
+      @csrf
+      <button class="ms-auto btn btn-outline-warning my-2" type="submit">
+        <i class="bi bi-box-arrow-left"></i> Logout
+      </button>
+    </form>
+  @else
+    <a href="/login" class="ms-auto btn btn-outline-warning my-2">
+      <i class="bi bi-box-arrow-in-right"></i> Login
+    </a>
+  @endauth
 </nav>
