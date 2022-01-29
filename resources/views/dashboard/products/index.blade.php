@@ -15,6 +15,16 @@
             {{ session('success') }}
           </div>
         @endif
+        @if (session()->has('delete'))
+          <div class="alert alert-danger" role="alert">
+            {{ session('delete') }}
+          </div>
+        @endif
+        @if (session()->has('edit'))
+          <div class="alert alert-success" role="alert">
+            {{ session('edit') }}
+          </div>
+        @endif
         <div class="table-responsive">
           <a href="/dashboard/products/create" class="btn btn-primary mb-3">Buat Produk Baru</a>
           <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -35,10 +45,15 @@
                   <td>
                     <a href="/dashboard/products/{{ $product->slug }}" class="btn-sm btn-info"><i
                         class="far fa-eye"></i></a>
-                    <a href="/dashboard/prodcts/{{ $product->id }}" class="btn-sm btn-warning"><i
+                    <a href="/dashboard/products/{{ $product->slug }}/edit" class="btn-sm btn-warning"><i
                         class="far fa-edit"></i></a>
-                    <a href="/dashboard/prodcts/{{ $product->id }}" class="btn-sm btn-danger"><i
-                        class="far fa-trash-alt"></i></a>
+                    <form action="/dashboard/products/{{ $product->slug }}" method="post" class="d-inline">
+                      @method('delete')
+                      @csrf
+                      <button class="btn-sm btn-danger border-0"
+                        onclick="return confirm('Apakah yakin menghapus ddata ?')"><i
+                          class="far fa-trash-alt"></i></button>
+                    </form>
                   </td>
                 </tr>
               @endforeach

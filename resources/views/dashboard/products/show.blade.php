@@ -9,14 +9,16 @@
           <i class="fas fa-chevron-left"></i>
           Kembali
         </a>
-        <a href="" class="btn btn-warning">
+        <a href="/dashboard/products/{{ $product->slug }}/edit" class="btn btn-warning">
           <i class="far fa-edit"></i>
           Edit
         </a>
-        <a href="" class="btn btn-danger">
-          <i class="far fa-trash-alt"></i>
-          Hapus
-        </a>
+        <form action="/dashboard/products/{{ $product->slug }}" method="post" class="d-inline">
+          @method('delete')
+          @csrf
+          <button class="btn btn-danger" onclick="return confirm('Apakah yakin menghapus ddata ?')"><i
+              class="far fa-trash-alt"></i> Hapus</button>
+        </form>
         <div class="my-3"></div>
         <img src="https://source.unsplash.com/1200x400?{{ $product->category->name }}" class="img-fluid"
           alt="{{ $product->category->name }}">

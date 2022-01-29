@@ -81,7 +81,11 @@ class DashboardProductController extends Controller
      */
     public function edit(Product $product)
     {
-        //
+        return view('dashboard.products.edit', [
+            'headtag' => 'Edit Produk',
+            'product' => $product,
+            'categories' => Category::all()
+        ]);
     }
 
     /**
@@ -93,7 +97,26 @@ class DashboardProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        //
+        $rules = [
+            'title' => 'required|max:255',
+            'category_id' => 'required',
+            'body' => 'required'
+        ];
+
+        if ($request->slug != $product->slug) {
+            $rules['slug'] = 'required|unique:products';
+        }
+
+        $validatedData = $request->validate($rules);
+
+
+        $validatedData['user_id'] = auth()->user()->id;
+        $validatedData['excerpt'] = Str::limit(strip_tags($request->body), 200);
+
+        Product::where('id', $product->id)
+            ->update($validatedData);
+
+        return redirect('/dashboard/products')->with('edit', 'Produk baru berhasil di Update');
     }
 
     /**
@@ -104,7 +127,9 @@ class DashboardProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        //
+        Product::destroy($product->id);
+
+        return redirect('/dashboard/products')->with('delete', 'Produk berhasil dihapus');
     }
 
     public function checkSlug(Request $request)
