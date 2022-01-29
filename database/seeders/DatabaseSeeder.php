@@ -28,7 +28,17 @@ class DatabaseSeeder extends Seeder
         //     'password' => bcrypt('password')
         // ]);
 
-        User::factory(3)->create();
+        User::factory(6)->create();
+
+        Category::create([
+            'name' => 'Smartphone',
+            'slug' => 'smartphone'
+        ]);
+
+        Category::create([
+            'name' => 'Laptop',
+            'slug' => 'laptop'
+        ]);
 
         Category::create([
             'name' => 'Kulkas',
@@ -36,16 +46,21 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Category::create([
-            'name' => 'Oven',
-            'slug' => 'oven'
+            'name' => 'Kipas Angin',
+            'slug' => 'kipas-angin'
         ]);
 
         Category::create([
-            'name' => 'Kompor',
-            'slug' => 'kompor'
+            'name' => 'Pendingin Ruangan',
+            'slug' => 'pendingin-ruangan'
         ]);
 
-        Product::factory(20)->create();
+        Category::create([
+            'name' => 'Mesin Cuci',
+            'slug' => 'mesin-cuci'
+        ]);
+
+        Product::factory(80)->create();
 
         // Product::create([
         //     'title' => 'Hp terbaik',

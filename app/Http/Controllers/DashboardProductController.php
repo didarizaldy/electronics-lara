@@ -19,7 +19,7 @@ class DashboardProductController extends Controller
     {
         return view('dashboard.products.index', [
             'headtag' => 'Dashboard',
-            'products' => Product::where('user_id', auth()->user()->id)->get()
+            'products' => Product::where('user_id', auth()->user()->id)->paginate(10)
         ]);
     }
 

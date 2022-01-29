@@ -51,7 +51,7 @@
                       @method('delete')
                       @csrf
                       <button class="btn-sm btn-danger border-0"
-                        onclick="return confirm('Apakah yakin menghapus ddata ?')"><i
+                        onclick="return confirm('Apakah yakin menghapus data ?')"><i
                           class="far fa-trash-alt"></i></button>
                     </form>
                   </td>
@@ -59,6 +59,10 @@
               @endforeach
             </tbody>
           </table>
+        </div>
+
+        <div class="d-flex justify-content-end">
+          {{ $products->links() }}
         </div>
       </div>
     </div>
