@@ -6,10 +6,10 @@
     <div class="container">
       <div class="row">
         @foreach ($categories as $category)
-          <div class="col-md-4">
+          <div class="col-md-4 my-4">
             <a href="/products?category={{ $category->slug }}">
               <div class="card bg-dark text-white">
-                <img src="https://source.unsplash.com/300x300?electronics" class="card-img"
+                <img src="https://source.unsplash.com/4dEDeUB4S3M/300x300" class="card-img"
                   alt="{{ $category->name }}">
                 <div class="card-img-overlay d-flex align-items-center p-0">
                   <h5 class="card-title text-center flex-fill p-4 fs-3" style="background-color: rgba(0, 0 , 0, 0.7)">
