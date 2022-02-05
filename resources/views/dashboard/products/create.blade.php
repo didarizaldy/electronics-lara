@@ -20,10 +20,10 @@
           @enderror
         </div>
         <div class="form-group">
-          <label for="slug">Slug</label>
+          <label for="slug">URL</label>
           <input type="text" class="form-control @error('slug')is-invalid              
           @enderror" id="slug"
-            name="slug" required value="{{ old('slug') }}">
+            name="slug" required value="{{ old('slug') }}" disabled readonly>
           @error('slug')
             <div class="invalid-feedback">
               {{ $message }}
@@ -53,19 +53,4 @@
       </form>
     </div>
   </div>
-
-  <script>
-    const title = document.querySelector('#title');
-    const slug = document.querySelector('#slug');
-
-    title.addEventListener('change', function() {
-      fetch('/dashboard/products/checkSlug?title=' + title.value)
-        .then(response => response.json())
-        .then(data => slug.value = data.slug)
-    });
-
-    document.addEventListener('trix-file-accept', functione(e) {
-      e.preventDefault();
-    });
-  </script>
 @endsection
