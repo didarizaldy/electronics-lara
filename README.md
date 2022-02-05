@@ -23,27 +23,27 @@ Website ini dibuat dengan menggunakan PHP Versi 8.1.1 dan menggunakan framework 
 
 ### Home
 
-    ![Home](img-Home)
+![Teaser](img-home)
 
 ### Daftar Produk
 
-    ![Daftar-Produk](img-Daftar-Produk)
+![Teaser](img-daftarroduk)
 
 ### Daftar Kategori
 
-    ![Produk-Kategori](img-Produk-Kategori)
+![Teaser](img-produkkategori)
 
 ### Login
 
-    ![Login](img-Login)
+![Teaser](img-login)
 
 ### Register
 
-    ![Register](img-Register)
+![Teaser](img-register)
 
 ### Dashboard
 
-    ![Dashboard](img-Dashboard)
+![Teaser](img-dashboard)
 
 ## Cara Penggunaan
 
