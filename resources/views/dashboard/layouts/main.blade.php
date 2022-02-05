@@ -32,11 +32,13 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>⚡ Electronics | Dashboard</span>
+            <span><img
+                src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/samsung/312/high-voltage_26a1.png"
+                width="18" height="18">
+              Electronics <strong>|</strong> Dashboard</span>
           </div>
         </div>
       </footer>
-
     </div>
 
   </div>
