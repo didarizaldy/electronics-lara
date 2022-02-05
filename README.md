@@ -28,7 +28,7 @@ Website ini dibuat dengan menggunakan PHP Versi 8.1.1 dan menggunakan framework 
 
 ### Daftar Produk
 
-![Teaser](./img/daftarroduk.png)
+![Teaser](./img/daftarproduk.png)
 
 ### Daftar Kategori
 
