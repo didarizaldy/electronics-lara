@@ -11,6 +11,7 @@ Website "Electronics" adalah sebuah simulasi website yang masih on-going dimana 
 
 -   Faker PHP.
 -   Factories.
+-   Unsplash API (Pick Gambar Random dari Unsplash).
 -   Login & Register Page.
 -   Showing lastest post.
 -   Sluggable (dimana bisa mendapatkan url web sesuai dengan judul yang ditulis).
@@ -23,7 +24,7 @@ Website ini dibuat dengan menggunakan PHP Versi 8.1.1 dan menggunakan framework 
 
 ### Home
 
-![Teaser](./img/home.png)
+![Teaser](./img/Home.png)
 
 ### Daftar Produk
 
@@ -35,15 +36,15 @@ Website ini dibuat dengan menggunakan PHP Versi 8.1.1 dan menggunakan framework 
 
 ### Login
 
-![Teaser](./img/login.png)
+![Teaser](./img/Login.png)
 
 ### Register
 
-![Teaser](./img/register.png)
+![Teaser](./img/Register.png)
 
 ### Dashboard
 
-![Teaser](./img/dashboard.png)
+![Teaser](./img/Dashboard.png)
 
 ## Cara Penggunaan
 
